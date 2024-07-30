@@ -1,6 +1,6 @@
 !==> Devops-Project<==!
 
-Repo link:- https://github.com/pavantocemca40/DevOps-CICD-Project
+Github Repository link:- https://github.com/pavantocemca40/DevOps-CICD-Project
 
 This repository contains the following below mentioned components:
 
@@ -46,17 +46,21 @@ Steps for implementing the project:-
      (This plugin is required to generate ssh agent syntax using pipeline syntax generator)
 
 5.  Access Jenkins portal & paste the 'CI-pipeline' code
+
      Run the pipeline
 	 
 6.  Now create another 'CD-pipeline'
+
      a. Enter the 'Pipeline name', 'Project Name' & 'Node-Server' Private IP under the environment variables section
      b. Run the pipeline
      c. Access the content from the browser using <Node_Server_Public_IP>:<NodePort_No>
 
  7.  Automation
+ 
      a. Automate the CD pipeline after CI pipeline is built successfully
         (CD-pipeline --> Configure --> Build Triggers --> Projects to watch (CI-pipeline) --> 
         Trigger only if build is stable --> Save)
+		
      b. Automate CI pipeline if any changes are pushed to Github
         (Webhook will be created in Github & trigger will be created in Jenkins)
         Jenkins --> Configure --> Build triggers --> 'Github hook trigger for GitSCM polling' --> Save
@@ -66,5 +70,6 @@ Steps for implementing the project:-
         (Try making any changes in your code & the pipeline should automatically trigger)
 
 8.  Deletion
+
      a. Run the below command in Terraform to destroy the entire infrastructure
         terraform destroy --auto-approve
