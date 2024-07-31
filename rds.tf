@@ -8,7 +8,7 @@ resource "aws_db_subnet_group" "db-group" {
 }
 resource "aws_db_instance" "db-group" {
   allocated_storage    = 10
-  db_subnet_group_name = aws_db_subnet_group.default.id
+  db_subnet_group_name = aws_db_subnet_group.db-group.id
   engine               = "mysql"
   engine_version       = "8.0.35"
   instance_class       = "db.t2.micro"
