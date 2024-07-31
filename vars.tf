@@ -26,7 +26,3 @@ variable "subnet4_cidr" {
 variable "subnet5_cidr" {
   default = "11.0.6.0/24"
 }
-#variable "AWS_ACCESS_KEY_ID" {
-#}
-#variable "AWS_SECRET_ACCESS_KEY" {
-#}
