@@ -1,0 +1,26 @@
+pipeline {
+
+    agent any
+
+    parameters {
+        string(name: "class", description: "enter anything")
+    }
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/pavantocemca40/3-tier-arch-terraform-aws.git'
+            }
+        }
+        stage ('terraform plan'){
+             steps {
+                 sh 'terraform plan'
+             }
+         }
+         stage ('terraform apply'){
+             steps {
+                 sh 'terraform apply --auto-approve'
+             }
+         }
+    }
+}
