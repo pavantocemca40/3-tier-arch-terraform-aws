@@ -1,1 +1,1 @@
-# Compleet DevOps implementation cycle with tools like GitHUb, jenkins, Docker, Kubernets & Terraform
+# Compleet 3-tier implementation cycle with tools like GitHUb & Terraform
