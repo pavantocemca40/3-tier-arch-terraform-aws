@@ -1,12 +1,12 @@
 # Creating RDS Instance
-resource "aws_db_subnet_group" "default" {
+resource "aws_db_subnet_group" "db-group" {
   name       = "main"
   subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
   tags = {
     Name = "My DB subnet group"
   }
 }
-resource "aws_db_instance" "default" {
+resource "aws_db_instance" "db-group" {
   allocated_storage    = 10
   db_subnet_group_name = aws_db_subnet_group.default.id
   engine               = "mysql"
