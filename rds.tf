@@ -13,8 +13,8 @@ resource "aws_db_instance" "my-database-group" {
   engine_version       = "5.7.44"
   instance_class       = "db.t3.micro"
   #multi_az               = true
-  username               = "admin"
-  password               = "chasermca40"
+  #username               = ""
+  #password               = ""
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.database-sg.id]
 }
